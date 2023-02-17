@@ -10,7 +10,7 @@
 int main(void)
 {
 	int i;
-	char alphabet[24] = "abcdfghijklmnoprstuvwxyz";
+	char alphabet[24] = "abcdefghijklmnopqrstuvwxyz";
 
 	for (i = 23; i >= 0; i--)
 	{
