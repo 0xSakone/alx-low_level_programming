@@ -5,6 +5,7 @@
 /**
  * main - Entry point
  * Display aplhabet in lowercase
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
