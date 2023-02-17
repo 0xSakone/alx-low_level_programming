@@ -4,7 +4,7 @@
 
 /**
  * main - Entry point
- * Display all posible digit of two digits 0, 1 
+ * Display all posible digit of two digits 0, 1
  * Return: Always 0 (Success)
  */
 int main(void)
