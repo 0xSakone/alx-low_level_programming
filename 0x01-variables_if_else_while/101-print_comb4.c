@@ -4,21 +4,25 @@
 
 /**
  * main - Entry point
- * Display all posible digit of two digits 0, 1, 2
+ * Display all posible digit of three digits 0, 1, 2
  * Return: Always 0 (Success)
  */
 int main(void)
 {
 	int i;
 
-	for (i = 0; i < 100; i++)
+	for (i = 0; i < 1000; i++)
 	{
-		putchar((i / 10) + '0');
-		putchar((i % 10) + '0');
-		if (i < 99)
+		if (i / 100 < i / 10 % 10 && i / 10 % 10 < i % 10)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(i / 100 + '0');
+			putchar(i / 10 % 10 + '0');
+			putchar(i % 10 + '0');
+			if (i < 789)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
