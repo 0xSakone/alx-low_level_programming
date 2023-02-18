@@ -4,7 +4,8 @@
 
 /**
  * main - Entry point
- * Display all posible digit of two double digit like 00 00, 00 01 ... 99 99 
+ * Display all posible digit of two double digit like 00 00, 00 01 ... 99 99
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
