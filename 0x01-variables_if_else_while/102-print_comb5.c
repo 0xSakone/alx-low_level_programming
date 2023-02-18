@@ -4,21 +4,26 @@
 
 /**
  * main - Entry point
- * Display all posible digit of two digits 0, 1, 2
- * Return: Always 0 (Success)
+ * Display all posible digit of two double digit like 00 00, 00 01 ... 99 99 
  */
 int main(void)
 {
 	int i;
 
-	for (i = 0; i < 100; i++)
+	for (i = 0; i < 10000; i++)
 	{
-		putchar((i / 10) + '0');
-		putchar((i % 10) + '0');
-		if (i < 99)
+		if (i / 100 < i % 100)
 		{
-			putchar(',');
+			putchar(i / 1000 + '0');
+			putchar(i / 100 % 10 + '0');
 			putchar(' ');
+			putchar(i / 10 % 10 + '0');
+			putchar(i % 10 + '0');
+			if (i < 9899)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
