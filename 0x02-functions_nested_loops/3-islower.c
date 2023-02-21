@@ -7,5 +7,5 @@
  */
 int _islower(char c)
 {
-	return ((c >= 97 && c <= 127) ? 1 : 0);
+	return ((c > 97 && c < 127) ? 1 : 0);
 }
