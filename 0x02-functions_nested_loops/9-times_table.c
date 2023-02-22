@@ -54,10 +54,10 @@ void times_table(void)
 			n = a * b;
 			if (n >= 10)
 			{
+				_putchar(' ');
 				showTwoDigit(n);
 				if (b != 9)
 				{
-					_putchar(' ');
 					_putchar(',');
 				}
 			}
