@@ -35,14 +35,14 @@ int main(void)
 
 	n = 1;
 	prev = 1;
-	for (count = 0; count < 50; count++)
+	while (prev < 4000000)
 	{
 		a = n;
 		n += prev;
 		prev = a;
-		if (n > 4000000)
+		if ((a % 2) == 0)
 		{
-			break;
+			prev += a;
 		}
 	}
 	display_number(prev);
