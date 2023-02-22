@@ -34,7 +34,7 @@ void print_times_table(int x)
 {
 	int a, b, n;
 
-	if (x >= 15 or x < 0)
+	if (x >= 15 || x < 0)
 	{
 		n = 0;
 	}
