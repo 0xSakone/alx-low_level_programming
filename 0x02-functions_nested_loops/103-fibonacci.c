@@ -35,7 +35,7 @@ int main(void)
 
 	n = 1;
 	prev = 1;
-	total += n;
+	total = n;
 	for (count = 0; count < 50; count++)
 	{
 		a = n;
