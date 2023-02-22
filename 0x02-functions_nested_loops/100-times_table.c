@@ -34,6 +34,10 @@ void print_times_table(int x)
 {
 	int a, b, n;
 
+	if (x >= 15 or x < 0)
+	{
+		return;
+	}
 	for (a = 0; a <= x; a++)
 	{
 		for (b = 0; b <= x; b++)
