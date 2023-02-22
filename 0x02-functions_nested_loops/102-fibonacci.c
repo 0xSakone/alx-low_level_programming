@@ -30,7 +30,7 @@ void display_number(int n)
  */
 int main(void)
 {
-	unsigned double a, n, prev;
+	double a, n, prev;
 	int count;
 
 	n = 1;
