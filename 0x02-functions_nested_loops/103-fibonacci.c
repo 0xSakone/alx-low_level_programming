@@ -37,13 +37,13 @@ int main(void)
 	total = 0;
 	while (prev < 4000000)
 	{
+		if ((n % 2) == 0)
+		{
+			total += n;
+		}
 		a = n;
 		n += prev;
 		prev = a;
-		if ((a % 2) == 0)
-		{
-			total += a;
-		}
 	}
 	display_number(total);
 	_putchar('\n');
