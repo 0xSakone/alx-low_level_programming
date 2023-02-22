@@ -57,8 +57,8 @@ void times_table(void)
 				showTwoDigit(n);
 				if (b != 9)
 				{
-					_putchar(',');
 					_putchar(' ');
+					_putchar(',');
 				}
 			}
 			else
