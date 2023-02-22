@@ -33,7 +33,7 @@ int main(void)
 	long int a, n, prev;
 
 	n = 1;
-	prev = 1;
+	prev = 0;
 	while (prev < 4000000)
 	{
 		a = n;
