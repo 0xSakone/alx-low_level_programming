@@ -40,6 +40,10 @@ int main(void)
 		a = n;
 		n += prev;
 		prev = a;
+		if (total + n > 4000000)
+		{
+			break;
+		}
 		total += n;
 	}
 	display_number(total);
