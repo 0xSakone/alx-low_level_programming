@@ -7,7 +7,7 @@
  *
  * Return: nothing
  */
-void display_number(long int n)
+void display_number(unsigned long long int n)
 {
 	if (n < 0)
 	{
@@ -23,26 +23,6 @@ void display_number(long int n)
 }
 
 /**
- * getFirstDigit - check if a given is result
- * The argument should be int
- *
- * @n: n value to check to check
- *
- * Return: print and return first digit
- */
-int getFirstDigit(int n)
-{
-	int first;
-
-	first = n;
-	for (first = n; first >= 10;)
-	{
-		first = first / 10;
-	}
-	return (first);
-}
-
-/**
  * main - entry function
  * No argument
  *
@@ -50,7 +30,7 @@ int getFirstDigit(int n)
  */
 int main(void)
 {
-	long int c, a, n, prev;
+	unsigned long long int c, a, n, prev;
 
 	n = 1;
 	prev = 0;
