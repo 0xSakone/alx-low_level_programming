@@ -7,7 +7,7 @@
  *
  * Return: nothing
  */
-void display_number(unsigned long long int n)
+void display_number(unsigned long int n)
 {
 	if (n < 0)
 	{
@@ -30,7 +30,7 @@ void display_number(unsigned long long int n)
  */
 int main(void)
 {
-	unsigned long long int c, a, n, prev;
+	unsigned long int c, a, n, prev;
 
 	n = 1;
 	prev = 0;
