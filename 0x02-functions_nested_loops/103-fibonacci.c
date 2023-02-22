@@ -31,7 +31,6 @@ void display_number(long int n)
 int main(void)
 {
 	long int a, n, prev;
-	int count;
 
 	n = 1;
 	prev = 1;
