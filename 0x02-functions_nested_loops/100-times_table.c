@@ -34,9 +34,9 @@ void print_times_table(int x)
 {
 	int a, b, n;
 
-	for (a = 0; a < x; a++)
+	for (a = 0; a <= x; a++)
 	{
-		for (b = 0; b < x; b++)
+		for (b = 0; b <= x; b++)
 		{
 			n = a * b;
 			if (n >= 10)
