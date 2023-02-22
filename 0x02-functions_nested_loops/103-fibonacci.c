@@ -40,7 +40,7 @@ int main(void)
 		a = n;
 		n += prev;
 		prev = a;
-		if (n > 5000000)
+		if (n > 4000000)
 		{
 			break;
 		}
