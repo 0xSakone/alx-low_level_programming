@@ -52,7 +52,7 @@ void times_table(void)
 		for (b = 0; b < 10; b++)
 		{
 			n = a * b;
-			if (n > 0)
+			if (n > 10)
 			{
 				showTwoDigit(n);
 				if (b != 9)
@@ -65,6 +65,7 @@ void times_table(void)
 			{
 				_putchar('0' + n);
 				_putchar(',');
+				_putchar(' ');
 				_putchar(' ');
 			}
 		}
