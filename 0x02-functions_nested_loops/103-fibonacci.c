@@ -44,7 +44,10 @@ int main(void)
 		{
 			break;
 		}
-		total += n;
+		else
+		{
+			total += n;
+		}
 	}
 	display_number(total);
 	_putchar('\n');
