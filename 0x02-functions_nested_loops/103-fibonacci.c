@@ -7,7 +7,7 @@
  *
  * Return: nothing
  */
-void display_number(int n)
+void display_number(long int n)
 {
 	if (n < 0)
 	{
@@ -30,7 +30,7 @@ void display_number(int n)
  */
 int main(void)
 {
-	int a, n, prev;
+	long int a, n, prev;
 	int count;
 
 	n = 1;
