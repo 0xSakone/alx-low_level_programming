@@ -7,7 +7,7 @@
  *
  * Return: nothing
  */
-void display_number(int n)
+void display_number(long n)
 {
 	if (n < 0)
 	{
