@@ -34,7 +34,8 @@ int main(void)
 	int count;
 
 	n = 1;
-	prev = 0;
+	prev = 1;
+	total += n;
 	for (count = 0; count < 50; count++)
 	{
 		a = n;
