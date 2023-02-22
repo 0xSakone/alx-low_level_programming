@@ -1,5 +1,14 @@
 #include "main.h"
 
+// Write a program that finds and prints the first 98 Fibonacci numbers, starting with 1 and 2, followed by a new line.
+
+// The numbers should be separated by comma, followed by a space ,
+// You are allowed to use the standard library
+// You are not allowed to use any other library (You can’t use GMP etc…)
+// You are not allowed to use long long, malloc, pointers, arrays/tables, or structures
+// You are not allowed to hard code any Fibonacci number (except for 1 and 2)
+
+
 /**
  * display_number - print number
  *
@@ -25,20 +34,26 @@ void display_number(long int n)
  */
 int main(void)
 {
-	long int c, a, n, prev;
+	long int i, j, k, l;
 
-	n = 1;
-	prev = 0;
-	for (c = 0; c < 98; c++)
+	i = 1;
+	j = 2;
+	display_number(i);
+	_putchar(',');
+	_putchar(' ');
+	display_number(j);
+	_putchar(',');
+
+	for (k = 0; k < 96; k++)
 	{
-		a = n;
-		n += prev;
-		prev = a;
-		display_number(n);
-		if (c != 97)
+		l = i + j;
+		i = j;
+		j = l;
+		_putchar(' ');
+		display_number(l);
+		if (k != 95)
 		{
 			_putchar(',');
-			_putchar(' ');
 		}
 	}
 	_putchar('\n');
