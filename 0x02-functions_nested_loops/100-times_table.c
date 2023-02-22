@@ -41,13 +41,13 @@ void print_times_table(int x)
 			n = a * b;
 			if (n >= 10)
 			{
-				if (n >= 10)
+				if (n >= 100)
 				{
-					_putchar(' ');
 					_putchar(' ');
 				}
-				else if (n >= 100)
+				else if (n >= 10)
 				{
+					_putchar(' ');
 					_putchar(' ');
 				}
 				display_number(n);
