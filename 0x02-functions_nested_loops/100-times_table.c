@@ -36,45 +36,49 @@ void print_times_table(int x)
 
 	if (x >= 15 or x < 0)
 	{
-		return;
+		n = 0;
 	}
-	for (a = 0; a <= x; a++)
+	else
 	{
-		for (b = 0; b <= x; b++)
+		for (a = 0; a <= x; a++)
 		{
-			n = a * b;
-			if (n >= 10)
+			for (b = 0; b <= x; b++)
 			{
-				if (n >= 100)
+				n = a * b;
+				if (n >= 10)
 				{
-					_putchar(' ');
+					if (n >= 100)
+					{
+						_putchar(' ');
+					}
+					else if (n >= 10)
+					{
+						_putchar(' ');
+						_putchar(' ');
+					}
+					display_number(n);
+					if (b != x)
+					{
+						_putchar(',');
+					}
 				}
-				else if (n >= 10)
+				else
 				{
-					_putchar(' ');
-					_putchar(' ');
-				}
-				display_number(n);
-				if (b != x)
-				{
-					_putchar(',');
+					if (b != 0)
+					{
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(' ');
+					}
+					_putchar('0' + n);
+					if (b != x)
+					{
+						_putchar(',');
+					}
 				}
 			}
-			else
-			{
-				if (b != 0)
-				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
-				}
-				_putchar('0' + n);
-				if (b != x)
-				{
-					_putchar(',');
-				}
-			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
+	
 }
