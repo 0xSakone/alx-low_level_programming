@@ -54,6 +54,7 @@ void print_times_table(int x)
 				{
 					_putchar(' ');
 					_putchar(' ');
+					_putchar(' ');
 				}
 				_putchar('0' + n);
 				if (b != 9)
