@@ -58,15 +58,14 @@ void times_table(void)
 				if (b != 9)
 				{
 					_putchar(',');
-					_putchar(' ');
+					_putchar('\t');
 				}
 			}
 			else
 			{
 				_putchar('0' + n);
 				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
+				_putchar('\t');
 			}
 		}
 		_putchar('\n');
