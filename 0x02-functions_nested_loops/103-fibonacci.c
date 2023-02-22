@@ -41,16 +41,12 @@ int main(void)
 		a = n;
 		n += prev;
 		prev = a;
-		if (total + n > 5000000)
+		if (n > 5000000)
 		{
 			break;
 		}
-		else
-		{
-			total += n;
-		}
 	}
-	display_number(total);
+	display_number(n);
 	_putchar('\n');
 	return (0);
 }
