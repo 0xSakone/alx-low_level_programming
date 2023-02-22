@@ -44,6 +44,7 @@ void jack_bauer(void)
 				_putchar('0');
 				_putchar('0' + h);
 			}
+			_putchar(':');
 			if (min > 10)
 			{
 				_putchar('0' + getFirstDigit(min));
@@ -54,6 +55,7 @@ void jack_bauer(void)
 				_putchar('0');
 				_putchar('0' + min);
 			}
+			_putchar('\n');
 		}
 	}
 }
