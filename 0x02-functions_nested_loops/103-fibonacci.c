@@ -45,6 +45,7 @@ int main(void)
 			break;
 		}
 	}
+	display_number(prev);
 	display_number(n);
 	_putchar('\n');
 	return (0);
