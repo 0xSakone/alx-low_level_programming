@@ -46,8 +46,6 @@ int main(void)
 		}
 	}
 	display_number(total);
-	_putchar(' ');
-	display_number(n);
 	_putchar('\n');
 	return (0);
 }
