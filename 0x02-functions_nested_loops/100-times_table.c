@@ -41,8 +41,15 @@ void print_times_table(int x)
 			n = a * b;
 			if (n >= 10)
 			{
-				_putchar(' ');
-				_putchar(' ');
+				if (b >= 10)
+				{
+					_putchar(' ');
+					_putchar(' ');
+				}
+				else if (b >= 100)
+				{
+					_putchar(' ');
+				}
 				display_number(n);
 				if (b != x)
 				{
@@ -53,16 +60,9 @@ void print_times_table(int x)
 			{
 				if (b != 0)
 				{
-					if (b >= 10)
-					{
-						_putchar(' ');
-						_putchar(' ');
-						_putchar(' ');
-					}
-					else if (b >= 100)
-					{
-						_putchar(' ');
-					}
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
 				}
 				_putchar('0' + n);
 				if (b != x)
