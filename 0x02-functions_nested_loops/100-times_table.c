@@ -34,11 +34,7 @@ void print_times_table(int x)
 {
 	int a, b, n;
 
-	if (x >= 15 || x < 0)
-	{
-		n = 0;
-	}
-	else
+	if (!(x >= 15 || x < 0))
 	{
 		for (a = 0; a <= x; a++)
 		{
@@ -48,9 +44,7 @@ void print_times_table(int x)
 				if (n >= 10)
 				{
 					if (n >= 100)
-					{
 						_putchar(' ');
-					}
 					else if (n >= 10)
 					{
 						_putchar(' ');
@@ -58,9 +52,7 @@ void print_times_table(int x)
 					}
 					display_number(n);
 					if (b != x)
-					{
 						_putchar(',');
-					}
 				}
 				else
 				{
@@ -72,13 +64,10 @@ void print_times_table(int x)
 					}
 					_putchar('0' + n);
 					if (b != x)
-					{
 						_putchar(',');
-					}
 				}
 			}
 			_putchar('\n');
 		}
 	}
-	
 }
