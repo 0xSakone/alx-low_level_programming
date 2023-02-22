@@ -30,10 +30,11 @@ void display_number(long int n)
  */
 int main(void)
 {
-	long int a, n, prev;
+	long int a, n, prev, total;
 
 	n = 1;
 	prev = 0;
+	total = 0;
 	while (prev < 4000000)
 	{
 		a = n;
@@ -41,10 +42,10 @@ int main(void)
 		prev = a;
 		if ((a % 2) == 0)
 		{
-			prev += a;
+			total += a;
 		}
 	}
-	display_number(prev);
+	display_number(total);
 	_putchar(' ');
 	display_number(n);
 	_putchar('\n');
