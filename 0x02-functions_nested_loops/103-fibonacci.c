@@ -30,12 +30,11 @@ void display_number(int n)
  */
 int main(void)
 {
-	int a, n, prev, total;
+	int a, n, prev;
 	int count;
 
 	n = 1;
 	prev = 1;
-	total = n;
 	for (count = 0; count < 50; count++)
 	{
 		a = n;
