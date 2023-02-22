@@ -64,10 +64,9 @@ void times_table(void)
 			else
 			{
 				_putchar(' ');
+				_putchar(' ');
 				_putchar('0' + n);
 				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
 			}
 		}
 		_putchar('\n');
