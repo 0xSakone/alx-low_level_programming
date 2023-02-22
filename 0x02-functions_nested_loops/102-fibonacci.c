@@ -40,7 +40,11 @@ int main(void)
 		n += prev;
 		prev = a;
 		display_number(n);
-		_putchar('\n');
+		if (count != 49)
+		{
+			_putchar(',');
+			_putchar(' ');
+		}
 	}
 	return (0);
 }
