@@ -59,14 +59,11 @@ int main(void)
 		a = n;
 		n += prev;
 		prev = a;
-		if (getFirstDigit(n) == 1 || getFirstDigit(n) == 2)
+		display_number(n);
+		if (c != 97)
 		{
-			display_number(n);
-			if (c != 97)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
+			_putchar(',');
+			_putchar(' ');
 		}
 	}
 	_putchar('\n');
