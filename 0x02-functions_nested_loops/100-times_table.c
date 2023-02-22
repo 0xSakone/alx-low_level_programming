@@ -42,6 +42,7 @@ void print_times_table(int x)
 			if (n >= 10)
 			{
 				_putchar(' ');
+				_putchar(' ');
 				display_number(n);
 				if (b != x)
 				{
