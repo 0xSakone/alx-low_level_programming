@@ -43,7 +43,7 @@ void print_times_table(int x)
 			{
 				_putchar(' ');
 				display_number(n);
-				if (b != 9)
+				if (b != x)
 				{
 					_putchar(',');
 				}
@@ -57,7 +57,7 @@ void print_times_table(int x)
 					_putchar(' ');
 				}
 				_putchar('0' + n);
-				if (b != 9)
+				if (b != x)
 				{
 					_putchar(',');
 				}
