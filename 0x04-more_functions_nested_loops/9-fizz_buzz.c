@@ -2,7 +2,9 @@
 
 /**
  * show - display character function
+ *
  * @s: char array
+ *
  * Return: nothing
  */
 void show(char s[4])
@@ -15,6 +17,7 @@ void show(char s[4])
 
 /**
  * main - main entry function
+ *
  * Return: return always 0
  */
 int main(void)
