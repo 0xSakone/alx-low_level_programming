@@ -1,6 +1,40 @@
 #include "main.h"
 
 /**
+ * display_number - print number
+ *
+ * @n: integer
+ *
+ * Return: nothing
+ */
+void display_number(int n)
+{
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+	}
+	if (n >= 10)
+	{
+		display_number(n / 10);
+		n %= 10;
+	}
+	_putchar(n + '0');
+}
+
+/**
+ * echochar - print char
+ *
+ * @c: char to print
+ *
+ * Return: nothing
+ */
+void echochar(char c)
+{
+	_putchar(c);
+}
+
+/**
  * more_numbers - display number from 0 to 14 10 times
  *
  * Return: nothing
@@ -13,16 +47,10 @@ void more_numbers(void)
 	{
 		for (j = 0; i < 15; j++)
 		{
-			if (j >= 10)
-			{
-				_putchar(j / 10 + '0');
-				_putchar(j % 10 + '0');
-			}
-			else
-				_putchar(j + '0');
+			display_numbers(j);
 		}
-		_putchar('\n');
+		echochar('\n');
 	}
-	_putchar('\n');
+	echochar('\n');
 }
 
