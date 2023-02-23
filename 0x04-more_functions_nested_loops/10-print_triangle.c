@@ -2,7 +2,9 @@
 
 /**
  * print_triangle - entry function
+ * 
  * @size: size of the triangle
+ * 
  * Return: 0
  */
 void print_triangle(int size)
