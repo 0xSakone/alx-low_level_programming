@@ -9,29 +9,22 @@
  */
 void display_number(int n)
 {
-	if (n < 0)
+	if (n == '\n')
+		_putchar('\n');
+	else
 	{
-		_putchar('-');
-		n = -n;
+		if (n < 0)
+		{
+			_putchar('-');
+			n = -n;
+		}
+		if (n >= 10)
+		{
+			display_number(n / 10);
+			n %= 10;
+		}
+		_putchar(n + '0');
 	}
-	if (n >= 10)
-	{
-		display_number(n / 10);
-		n %= 10;
-	}
-	_putchar(n + '0');
-}
-
-/**
- * echochar - print char
- *
- * @c: char to print
- *
- * Return: nothing
- */
-void echochar(char c)
-{
-	_putchar(c);
 }
 
 /**
@@ -47,10 +40,10 @@ void more_numbers(void)
 	{
 		for (j = 0; i < 15; j++)
 		{
-			display_numbers(j);
+			display_number(j);
 		}
-		echochar('\n');
+		display_number('\n');
 	}
-	echochar('\n');
+	display_number('\n');
 }
 
