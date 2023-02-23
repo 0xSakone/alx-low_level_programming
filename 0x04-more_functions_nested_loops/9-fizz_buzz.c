@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * show - display string function
+ * show - display character function
  * @s: char array
  * Return: nothing
  */
@@ -47,5 +47,6 @@ int main(void)
 		_putchar(' ');
 	}
 	_putchar('\n');
+	return (0);
 }
 
