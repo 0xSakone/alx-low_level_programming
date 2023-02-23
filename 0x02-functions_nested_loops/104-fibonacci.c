@@ -36,6 +36,7 @@ void display_number(long int n)
 int main(void)
 {
 	long int i, j, k, l;
+	long int partie_1, partie_2, k1, k2;
 
 	i = 1;
 	j = 2;
@@ -45,13 +46,30 @@ int main(void)
 	display_number(j);
 	_putchar(',');
 
-	for (k = 0; k < 96; k++)
+	for (k = 0; k < 91; k++)
 	{
 		l = i + j;
 		i = j;
 		j = l;
 		_putchar(' ');
 		display_number(l);
+		_putchar(',');
+	}
+
+	partie_1 = i / 1000000000;
+	partie_2 = i % 1000000000;
+	k1 = j / 1000000000;
+	k2 = j % 1000000000;
+
+	for (k = 92; k < 99; ++k)
+	{
+		_putchar(',');
+		display_number(k1 + (k2 / 1000000000));
+		display_number(k2 % 1000000000);
+		k1 = k1 + partie_1;
+		partie_1 = k1 - partie_1;
+		k2 = k2 + partie_2;
+		partie_2 = k2 - partie_2;
 		if (k != 95)
 		{
 			_putchar(',');
