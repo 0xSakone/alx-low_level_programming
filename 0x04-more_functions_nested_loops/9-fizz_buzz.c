@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * main - main entry function
@@ -7,28 +7,24 @@
  */
 int main(void)
 {
-	int i, j;
+	int i;
 
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 3 == 0)
-			for (j = 0; j < 4; j++)
-				_putchar("Fizz"[j]);
+			printf("Fizz");
 		if (i % 5 == 0)
-			for (j = 0; j < 4; j++)
-				_putchar("Buzz"[j]);
+			printf("Buzz");
 		else if (i % 3 != 0)
 		{
 			if (i >= 10)
-			{
-				_putchar('0' + i / 10);
-				_putchar('0' + i % 10);
-			}
+				printf("%i", i);
 			else
-				_putchar('0' + i);
+				printf("%i", i);
 		}
-		_putchar(' ');
+		if (i != 100)
+			putchar(' ');
 	}
-	_putchar('\n');
+	putchar('\n');
 	return (0);
 }
