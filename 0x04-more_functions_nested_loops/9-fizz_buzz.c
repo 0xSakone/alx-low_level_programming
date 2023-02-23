@@ -15,8 +15,6 @@ void show(char s[4])
 
 /**
  * main - main entry function
- *
- *
  * Return: return always 0
  */
 int main(void)
@@ -25,16 +23,11 @@ int main(void)
 
 	for (i = 1; i <= 100; i++)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
-		{
+		if (i % 3 == 0)
 			show("Fizz");
+		if (i % 5 == 0)
 			show("Buzz");
-		}
-		else if (i % 3 == 0)
-			show("Fizz");
-		else if (i % 5 == 0)
-			show("Buzz");
-		else
+		else if (i % 3 != 0)
 		{
 			if (i >= 10)
 			{
