@@ -1,35 +1,22 @@
 #include "main.h"
 
 /**
- * show - display character function
- *
- * @s: char array
- *
- * Return: nothing
- */
-void show(char s[4])
-{
-	int i;
-
-	for (i = 0; i < 4; i++)
-		_putchar(s[i]);
-}
-
-/**
  * main - main entry function
  *
  * Return: return always 0
  */
 int main(void)
 {
-	int i;
+	int i, j;
 
 	for (i = 1; i <= 100; i++)
 	{
 		if (i % 3 == 0)
-			show("Fizz");
+			for (j = 0; j < 4; j++)
+				_putchar("Fizz"[j]);
 		if (i % 5 == 0)
-			show("Buzz");
+			for (j = 0; j < 4; j++)
+				_putchar("Buzz"[j]);
 		else if (i % 3 != 0)
 		{
 			if (i >= 10)
@@ -45,4 +32,3 @@ int main(void)
 	_putchar('\n');
 	return (0);
 }
-
