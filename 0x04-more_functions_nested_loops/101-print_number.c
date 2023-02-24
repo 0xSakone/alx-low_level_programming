@@ -2,9 +2,8 @@
 
 /**
  * print_number - print number
- *
+ * another details
  * @n: integer
- *
  * Return: nothing
  */
 void print_number(int n)
