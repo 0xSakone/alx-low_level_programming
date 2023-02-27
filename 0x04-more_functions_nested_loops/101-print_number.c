@@ -3,11 +3,14 @@
 /**
  * print_number - print number
  * another details
- * @n: integer
+ * @v: integer
  * Return: nothing
  */
-void print_number(int n)
+void print_number(int v)
 {
+	unsigned int n;
+
+	n = v;
 	if (n < 0)
 	{
 		_putchar('-');
