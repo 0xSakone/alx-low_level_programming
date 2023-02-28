@@ -11,22 +11,12 @@
  */
 int _atoi(char *s)
 {
-	int i, start_n = 0, nfind = 0, sign = 1;
+	int i, sign = 1;
 
 	for (i = 0; i < (int)strlen(s) - 1; i++)
-	{
-		if (nfind == 0 && (s[i] == '-'))
-			sign *= -1;
-		else if (nfind == 0 && (s[i] >= '0' && s[i] <= '9'))
-		{
-			start_n = i;
-			nfind = 1;
-		}
-		else if (nfind == 1 && !(s[i] >= '0' && s[i] <= '9'))
-		{
+		if (s[i] == '-')
+			sign = sign*-1;
+		else if (s[i] >= '0' && s[i] <= '9')
 			break;
-		}
-	}
-
-	return ((atoi(&s[start_n]) * (pow(10, 1) / 10)) * sign);
+	return ((atoi(&s[i]) * (pow(10, 1) / 10)) * sign);
 }
