@@ -11,24 +11,24 @@
 char *rot13(char *s1)
 {
 	int i = 0, u = -1, n = 0;
-	char ptr[80] = "abcdefghijklmnopqrstuvwxyzabcdefghijklm";
-	char alpha2[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char ptr[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char ptr2[52] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	char c;
 
-	strcat(ptr, alpha2);
-	while (u != '\0')
+	u = s1[0];
+	do
 	{
 		u = s1[i];
-		for (n = 0; n <= 81; n++)
+		for (n = 0; n <= 78; n++)
 		{
 			c = ptr[n];
 			if (u == c)
 			{
-				s1[i] = ptr[n + 13];
+				s1[i] = ptr2[n];
 				break;
 			}
 		}
 		i++;
-	}
+	} while (u != '\0');
 	return (s1);
 }
