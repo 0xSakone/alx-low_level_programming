@@ -18,6 +18,6 @@ void print_number(int n)
 
 	if ((n2 % 10) != n2)
 		print_number(n2 / 10);
-		_putchar((n2 % 10) + '0');
 
+	_putchar((n2 % 10) + '0');
 }
