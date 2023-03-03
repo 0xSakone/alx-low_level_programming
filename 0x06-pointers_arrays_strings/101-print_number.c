@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_number - print number
- * @n: number to print
+ * print_number - prints an integer;
+ * @n: integer to be printed;
  */
 void print_number(int n)
 {
-	unsigned int n2;
+	int n2;
 
 	if (n < 0)
 	{
@@ -15,7 +15,9 @@ void print_number(int n)
 	}
 	else
 		n2 = n;
-	if ((n2 % 10) != n2)
+
+	if (n2 / 10)
 		print_number(n2 / 10);
-		_putchar((n2 % 10) + '0');
+
+	_putchar((n2 % 10) + '0');
 }
