@@ -14,21 +14,18 @@ char *leet(char *s1)
 	char leetA[] = "aeotl";
 	char leetAA[] = "AEOTL";
 	char leetV[] = "43071";
-	char *ptr = NULL;
-	char *ptr2 = NULL;
 
 	for (i = 0; i < 5; i++)
 	{
 		u = -1;
+		n = 0;
 		while (u != '\0')
 		{
 			u = s1[n];
-			ptr = strchr(s1, leetA[i]);
-			ptr2 = strchr(s1, leetAA[i]);
-			if (ptr != NULL)
-				*ptr = leetV[i];
-			else if (ptr2 != NULL)
-				*ptr2 = leetV[i];
+			if (s1[n] == leetA[i] || s1[n] == leetAA[i])
+			{
+				s1[n] = leetV[i];
+			}
 			n++;
 		}
 	}
