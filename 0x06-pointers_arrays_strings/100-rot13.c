@@ -19,7 +19,7 @@ char *rot13(char *s1)
 	while (u != '\0')
 	{
 		u = s1[i];
-		for (n = 0; n <= 80; n++)
+		for (n = 0; n <= 81; n++)
 		{
 			c = ptr[n];
 			if (u == c)
