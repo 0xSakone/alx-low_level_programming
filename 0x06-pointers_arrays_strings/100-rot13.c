@@ -16,10 +16,9 @@ char *rot13(char *s1)
 	char c;
 
 	u = s1[0];
-	do
-	{
+	do {
 		u = s1[i];
-		for (n = 0; n <= 78; n++)
+		for (n = 0; n <= 51; n++)
 		{
 			c = ptr[n];
 			if (u == c)
