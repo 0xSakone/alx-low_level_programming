@@ -27,7 +27,7 @@ void print_buffer(char *b, int size)
 				if (u == (i + 1) * 10)
 					break;
 			}
-			if (u <= size)
+			if (u <= size - 1)
 				printf("%.2x", b[u]);
 			else
 				printf("  ");
@@ -39,9 +39,9 @@ void print_buffer(char *b, int size)
 		{
 			if (u2 == (i + 1) * 10)
 				break;
-			if (u2 <= size)
+			if (u2 <= size - 1)
 			{
-				if (b[u2] < 12)
+				if (b[u2] < 11)
 					printf(".");
 				else
 					printf("%c", b[u2]);
