@@ -10,9 +10,10 @@
  */
 void print_buffer(char *b, int size)
 {
-	int i, u = 0, u2 = 0, k = 0;
+	int i, u = 0, u2 = 0, k = 0, s;
 
-	for (i = 0; i < size / 10 + 1; i++)
+	s = size % 10 > 0 ? 1 : 0;
+	for (i = 0; i < size / 10 + s; i++)
 	{
 		printf("%.6x: ", i * 10);
 		k = 0;
