@@ -10,10 +10,8 @@
  */
 void print_buffer(char *b, int size)
 {
-	int i, u, u2, k = 0;
+	int i, u = 0, u2 = 0, k = 0;
 
-	u = 0;
-	u2 = 0;
 	for (i = 0; i < size / 10 + 1; i++)
 	{
 		printf("%.6x: ", i * 10);
@@ -30,10 +28,7 @@ void print_buffer(char *b, int size)
 			if (u <= size - 1)
 				printf("%.2x", b[u]);
 			else
-			{
-				printf("\t\t");
-				break;
-			}
+				printf("  ");
 			u++;
 			k++;
 		}
@@ -44,7 +39,7 @@ void print_buffer(char *b, int size)
 				break;
 			if (u2 <= size - 1)
 			{
-				if (b[u2] < 11)
+				if (b[u2] < 32 || b[u2] > 126)
 					printf(".");
 				else
 					printf("%c", b[u2]);
