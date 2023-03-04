@@ -30,7 +30,10 @@ void print_buffer(char *b, int size)
 			if (u <= size - 1)
 				printf("%.2x", b[u]);
 			else
-				printf("  ");
+			{
+				printf("\t\t");
+				break;
+			}
 			u++;
 			k++;
 		}
