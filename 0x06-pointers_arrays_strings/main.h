@@ -12,5 +12,6 @@ char *cap_string(char *s1);
 char *leet(char *s1);
 char *rot13(char *s1);
 void print_number(int n);
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
 
 #endif
