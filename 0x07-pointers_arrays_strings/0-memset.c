@@ -6,7 +6,7 @@
  * @s: string
  * @b: character
  * @n: number of bit
- * 
+ *
  * Return: pointer to char.
  */
 char *_memset(char *s, char b, unsigned int n)
