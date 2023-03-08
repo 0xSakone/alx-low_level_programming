@@ -14,9 +14,8 @@ void _print_rev_recursion(char *s)
 {
 	char *ss = (char *) malloc((strlen(s) - 1) * sizeof(char));
 
-	if (strlen(s) - 1 <= 0 || strcmp(s, "") == 0)
+	if (strlen(s) - 1 < 0 || strcmp(s, "") == 0)
 	{
-		_putchar('\n');
 		return;
 	}
 	if (s[strlen(s) - 1] != 1 + '0' && s[strlen(s) - 1] != 'A')
