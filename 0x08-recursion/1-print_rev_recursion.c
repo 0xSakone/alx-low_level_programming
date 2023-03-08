@@ -16,6 +16,7 @@ void _print_rev_recursion(char *s)
 
 	if (strlen(s) - 1 <= 0 || strcmp(s, "") == 0)
 	{
+		_putchar('\n');
 		return;
 	}
 	if (s[strlen(s) - 1] != 1 + '0' && s[strlen(s) - 1] != 'A')
