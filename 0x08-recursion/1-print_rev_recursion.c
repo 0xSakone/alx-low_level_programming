@@ -14,7 +14,7 @@ void _print_rev_recursion(char *s)
 {
 	char *ss = (char *) malloc((strlen(s) - 1) * sizeof(char));
 
-	if (strlen(s) - 1 == 0)
+	if (strlen(s) - 1 <= 0)
 	{
 		return;
 	}
