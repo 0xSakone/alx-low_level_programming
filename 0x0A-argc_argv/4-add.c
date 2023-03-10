@@ -41,12 +41,16 @@ int main(int argc, char *argv[])
 		while (s[u] != '\0')
 		{
 			if (s[u] >= '0' && s[u] <= '9')
-				sum += atoi((s + u));
+			{
+				if (atoi((s + u)) >= 0)
+					sum += atoi((s + u));
+			}
 			else
 			{
 				si = 0;
 				while (ss[si] != '\0')
 					_putchar(ss[si++]);
+				_putchar('\n');
 				return (0);
 			}
 			u++;
