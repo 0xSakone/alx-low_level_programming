@@ -24,6 +24,21 @@ void display_number(int n)
 }
 
 /**
+ * showError - print number
+ * Return: 1 as error
+ */
+int showError(void)
+{
+	int si = 0;
+	char *ss = "Error";
+
+	while (ss[si] != '\0')
+		_putchar(ss[si++]);
+	_putchar('\n');
+	return (1);
+}
+
+/**
  * main - entry function
  * @argc: argument count
  * @argv: argument array
@@ -31,42 +46,37 @@ void display_number(int n)
  */
 int main(int argc, char *argv[])
 {
-	int sum = 0, i, u, si;
-	char *s, *ss = "Error";
+	int sum = 0, i, u, tun = 0;
+	char *s, c;
 
 	for (i = 1; i < argc; i++)
 	{
 		u = 0;
 		s = argv[i];
+		tun = 0;
 		while (s[u] != '\0')
 		{
-			if ((s[u] >= '0' && s[u] <= '9') || (s[u] == '-' || s[u] == '+'))
+			c = s[u++];
+			if ((c >= '0' && c <= '9') || (c == '-' || c == '+'))
 			{
-				if (s[u] == '-')
-					break;
-				else if (s[u] == '+')
+				if (c == '+')
+					sum += atoi((s + (u - 1)));
+				else if (c == '-')
 				{
-					sum += atoi((s + u));
-					break;
+					tun = 1;
+					if (!(s[u] >= '0' && s[u] <= '9'))
+						return (showError());
 				}
-				else if (atoi((s + u)) >= 0)
-				{
-					sum += atoi((s + u));
+				else if (atoi((s + (u - 1))) >= 0)
+					sum += atoi((s + (u - 1)));
+				if (tun == 0)
 					break;
-				}
 			}
 			else
-			{
-				si = 0;
-				while (ss[si] != '\0')
-					_putchar(ss[si++]);
-				_putchar('\n');
-				return (1);
-			}
+				return (showError());
 			u++;
 		}
 	}
 	display_number(sum);
-	_putchar('\n');
-	return (0);
+	return (_putchar('\n'));
 }
