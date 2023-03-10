@@ -77,28 +77,23 @@ int showError(void)
  */
 int main(int argc, char *argv[])
 {
-	int sum = 0, i, u, tun = 0;
+	int sum = 0, i, u;
 	char *s, c;
 
 	for (i = 1; i < argc; i++)
 	{
 		u = 0;
 		s = argv[i];
-		tun = 0;
 		while (s[u] != '\0')
 		{
 			c = s[u];
-			if ((c >= '0' && c <= '9') || (c == '-' || c == '+'))
+			if (!(c >= '0' && c <= '9'))
 			{
-				if (c == '-')
-					tun = 1;
-			}
-			else
 				return (showError());
+			}
 			u++;
 		}
-		if (tun == 0)
-			sum += _atoi(argv[i]);
+		sum += _atoi(argv[i]);
 	}
 	display_number(sum);
 	return (_putchar('\n'));
