@@ -43,7 +43,10 @@ int main(int argc, char *argv[])
 			if ((s[u] >= '0' && s[u] <= '9') || (s[u] == '-' || s[u] == '+'))
 			{
 				if (s[u] == '-')
+				{
+					sum += atoi((s + u));
 					break;
+				}
 				else if (s[u] == '+')
 				{
 					sum += atoi((s + u));
