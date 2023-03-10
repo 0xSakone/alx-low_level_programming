@@ -44,7 +44,8 @@ int showError(void)
  */
 int main(int argc, char *argv[])
 {
-	int sum = 0, n = 0;
+	int sum = 0, n = 0, i;
+	int arr[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 		return (showError());
@@ -55,30 +56,14 @@ int main(int argc, char *argv[])
 
 	while (n != 0)
 	{
-		if (n >= 25)
+		for (i = 0; i < 5; i++)
 		{
-			n -= 25;
-			sum++;
-		}
-		else if (n >= 10)
-		{
-			n -= 10;
-			sum++;
-		}
-		else if (n >= 5)
-		{
-			n -= 5;
-			sum++;
-		}
-		else if (n >= 2)
-		{
-			n -= 2;
-			sum++;
-		}
-		else if (n >= 1)
-		{
-			n -= 1;
-			sum++;
+			if (n >= arr[i])
+			{
+				n -= arr[i];
+				sum++;
+				break;
+			}
 		}
 	}
 	display_number(sum);
