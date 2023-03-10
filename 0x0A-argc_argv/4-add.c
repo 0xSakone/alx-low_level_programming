@@ -5,7 +5,7 @@
  * @s: String
  * Return: Integer
  */
-int _atoi(char *s)
+int _anum(char *s)
 {
 	unsigned int count = 0, size = 0, oi = 0, pn = 1, m = 1, i;
 
@@ -86,14 +86,11 @@ int main(int argc, char *argv[])
 		s = argv[i];
 		while (s[u] != '\0')
 		{
-			c = s[u];
+			c = s[u++];
 			if (!(c >= '0' && c <= '9'))
-			{
 				return (showError());
-			}
-			u++;
 		}
-		sum += _atoi(argv[i]);
+		sum += _anum(argv[i]);
 	}
 	display_number(sum);
 	return (_putchar('\n'));
