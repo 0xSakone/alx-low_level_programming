@@ -1,7 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 
 /**
  * display_number - print number
