@@ -40,10 +40,13 @@ int main(int argc, char *argv[])
 		s = argv[i];
 		while (s[u] != '\0')
 		{
-			if ((s[u] >= '0' && s[u] <= '9') || s[u] == '-')
+			if ((s[u] >= '0' && s[u] <= '9') || (s[u] == '-' || s[u] == '+'))
 			{
 				if (s[u] == '-')
+					break;
+				else if (s[u] == '+')
 				{
+					sum += atoi((s + u));
 					break;
 				}
 				else if (atoi((s + u)) >= 0)
