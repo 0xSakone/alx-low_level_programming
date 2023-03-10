@@ -52,7 +52,11 @@ int main(int argc, char *argv[])
 
 	n = atoi(argv[1]);
 	if (n < 0)
-		return (showError());
+	{
+		_putchar('0');
+		_putchar('\n');
+		return (0);
+	}
 
 	while (n != 0)
 	{
