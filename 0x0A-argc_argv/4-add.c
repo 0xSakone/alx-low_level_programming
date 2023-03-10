@@ -56,26 +56,20 @@ int main(int argc, char *argv[])
 		tun = 0;
 		while (s[u] != '\0')
 		{
-			c = s[u++];
+			c = s[u];
+			printf("%c - \n", c);
 			if ((c >= '0' && c <= '9') || (c == '-' || c == '+'))
 			{
-				if (c == '+')
-					sum += atoi((s + (u - 1)));
-				else if (c == '-')
-				{
+				if (c == '-')
 					tun = 1;
-					if (!(s[u] >= '0' && s[u] <= '9'))
-						return (showError());
-				}
-				else if (atoi((s + (u - 1))) >= 0)
-					sum += atoi((s + (u - 1)));
-				if (tun == 0)
-					break;
 			}
 			else
 				return (showError());
 			u++;
 		}
+		if (tun == 0)
+			if (atoi(argv[i]) >= 0)
+				sum += atoi(argv[i]);
 	}
 	display_number(sum);
 	return (_putchar('\n'));
