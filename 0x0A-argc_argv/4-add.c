@@ -57,7 +57,6 @@ int main(int argc, char *argv[])
 		while (s[u] != '\0')
 		{
 			c = s[u];
-			printf("%c - \n", c);
 			if ((c >= '0' && c <= '9') || (c == '-' || c == '+'))
 			{
 				if (c == '-')
@@ -68,8 +67,7 @@ int main(int argc, char *argv[])
 			u++;
 		}
 		if (tun == 0)
-			if (atoi(argv[i]) >= 0)
-				sum += atoi(argv[i]);
+			sum += atoi(argv[i]);
 	}
 	display_number(sum);
 	return (_putchar('\n'));
