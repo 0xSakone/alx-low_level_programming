@@ -25,19 +25,17 @@ int wildcmp(char *s1, char *s2)
  */
 int wildcmp_helper(char *str1, char *str2, int i, int j)
 {
+	int k, l;
+
 	if (str1[i] == '\0' && str2[j] == '\0')
 		return (1);
 	if (str2[j] == '*')
 	{
 		if (str2[j + 1] == '\0')
 			return (1);
-		while (str1[i] != '\0')
-		{
-			if (wildcmp_helper(str1, str2, i, j + 1))
-				return (1);
-			i++;
-		}
-		return (0);
+		k = wildcmp_helper(str1, str2, i, j + 1);
+		l = (str1[i] != '\0' && wildcmp_helper(str1, str2, i + 1, j));
+		return (k || l);
 	}
 	if (str1[i] == str2[j])
 		return (wildcmp_helper(str1, str2, i + 1, j + 1));
