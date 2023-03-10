@@ -1,24 +1,6 @@
 #include "main.h"
 
 /**
- * print_string - display string
- * @s: string
- * Return: nothing
- */
-void print_string(char *s)
-{
-	int i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		_putchar(s[i]);
-		i++;
-	}
-	_putchar('\n');
-}
-
-/**
  * main - entry function
  * @argc: argument count
  * @argv: argument array
@@ -26,6 +8,16 @@ void print_string(char *s)
  */
 int main(int argc, char *argv[])
 {
-	print_string(argv[argc - 1]);
+	int i;
+	char *s;
+
+	i = 0;
+	s = argv[argc - 1];
+	while (s[i] != '\0')
+	{
+		_putchar(s[i]);
+		i++;
+	}
+	_putchar('\n');
 	return (0);
 }
