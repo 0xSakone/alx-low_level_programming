@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 				while (ss[si] != '\0')
 					_putchar(ss[si++]);
 				_putchar('\n');
-				return (0);
+				return (1);
 			}
 			u++;
 		}
