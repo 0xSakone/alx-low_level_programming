@@ -50,6 +50,6 @@ int main(int argc, char *argv[])
 		}
 		sum += atoi(argv[i]);
 	}
-	print_number(sum);
+	display_number(sum);
 	return (_putchar('\n'));
 }
