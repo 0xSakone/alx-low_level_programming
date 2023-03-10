@@ -3,5 +3,6 @@
 
 int _putchar(char a);
 void _puts(char *s);
+int _atoi(char *s);
 
 #endif

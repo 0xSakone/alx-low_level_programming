@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 			u++;
 		}
 		if (tun == 0)
-			sum += atoi(argv[i]);
+			sum += _atoi(argv[i]);
 	}
 	display_number(sum);
 	return (_putchar('\n'));
