@@ -26,7 +26,7 @@ void display_number(int n)
  * @argv: argument array
  * Return: 0 as successs
  */
-int main(int argc, char *argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
 	display_number(argc - 1);
 	_putchar('\n');
