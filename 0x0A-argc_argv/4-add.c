@@ -22,21 +22,6 @@ void display_number(int n)
 }
 
 /**
- * showError - print number
- * Return: 1 as error
- */
-int showError(void)
-{
-	int si = 0;
-	char *ss = "Error";
-
-	while (ss[si] != '\0')
-		_putchar(ss[si++]);
-	_putchar('\n');
-	return (1);
-}
-
-/**
  * main - entry function
  * @argc: argument count
  * @argv: argument array
@@ -44,8 +29,8 @@ int showError(void)
  */
 int main(int argc, char *argv[])
 {
-	int sum = 0, i, u;
-	char *s, c;
+	int sum = 0, i, u, si = 0;
+	char *s, c, *ss = "Error";
 
 	for (i = 1; i < argc; i++)
 	{
@@ -55,7 +40,12 @@ int main(int argc, char *argv[])
 		{
 			c = s[u];
 			if (!(c >= '0' && c <= '9'))
-				return (showError());
+			{
+				while (ss[si] != '\0')
+					_putchar(ss[si++]);
+				_putchar('\n');
+				return (1);
+			}
 			u++;
 		}
 		sum += atoi(argv[i]);
