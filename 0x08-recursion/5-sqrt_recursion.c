@@ -11,15 +11,9 @@ int _sqrt_recursion_helper(int n, int i);
  */
 int _sqrt_recursion(int n)
 {
-	double result = 0.0;
-
 	if (n <= -1)
 		return (-1);
-	result = _sqrt_recursion_helper(n, 1);
-	if (fabs(round(result) - result) < 0.0001)
-		return ((int) result);
-	else
-		return (-1);
+	return (_sqrt_recursion_helper(n, 1));
 }
 
 /**
