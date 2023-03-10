@@ -44,7 +44,6 @@ int main(int argc, char *argv[])
 			{
 				if (s[u] == '-')
 				{
-					sum += atoi((s + u));
 					break;
 				}
 				else if (atoi((s + u)) >= 0)
