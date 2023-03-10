@@ -2,6 +2,5 @@
 #define MAIN_HEADER_FILE
 
 int _putchar(char a);
-void print_number(int n);
 
 #endif
