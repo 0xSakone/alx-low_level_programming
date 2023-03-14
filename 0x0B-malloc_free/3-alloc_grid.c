@@ -28,6 +28,7 @@ int **alloc_grid(int width, int height)
 			if (c == NULL)
 			{
 				free(c);
+				free(b);
 				return (NULL);
 			}
 			while (u < height)
