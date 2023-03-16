@@ -31,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			i++;
 		}
 		u = 0;
-		while (u < (int)n && (int)strlen(s2) > u)
+		while (u < (int)n && (int)strlen(s2) => u)
 		{
 			b[i] = s2[u];
 			u++;
