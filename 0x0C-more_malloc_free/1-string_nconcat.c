@@ -31,12 +31,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			i++;
 		}
 		u = 0;
-		while (u < (int) n)
+		while (u < (int)n)
 		{
 			b[i] = s2[u];
 			u++;
 			i++;
 		}
 	}
+	else
+		return (NULL);
 	return (b);
 }
