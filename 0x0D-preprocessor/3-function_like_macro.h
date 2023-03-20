@@ -1,6 +1,6 @@
-#ifndef OBJECT_LINE_MACRO_FILE
-#define OBJECT_LINE_MACRO_FILE
+#ifndef ABS_FILE
+#define ABS_FILE
 
-#define ABS(a) ((a) > 0 ? (a) : (-a))
+#define ABS(a) ((a) < 0 ? (-a) : (a))
 
 #endif
