@@ -1,4 +1,4 @@
-#include <math.h>
+#include <stdlib.h>
 
 #ifndef ABS_FILE
 #define ABS_FILE
