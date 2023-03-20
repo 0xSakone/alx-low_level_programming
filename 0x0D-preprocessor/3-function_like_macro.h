@@ -1,6 +1,6 @@
 #ifndef ABS_FILE
 #define ABS_FILE
 
-#define ABS(a) ((a) < 0 ? ((unsigned int)-a) : ((unsigned int)a))
+#define ABS(a) ((a) < 0 ? ((unsigned)-a) : ((unsigned)a))
 
 #endif
