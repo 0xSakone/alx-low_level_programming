@@ -1,8 +1,6 @@
-#include <stdlib.h>
-
 #ifndef ABS_FILE
 #define ABS_FILE
 
-#define ABS(a) (abs(a))
+#define ABS(a) ((a < 0) ? (-a) : (a))
 
 #endif
