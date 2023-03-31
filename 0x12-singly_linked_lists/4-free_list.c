@@ -5,9 +5,8 @@
 
 /**
  * free_list - print all print list
- * Description: no description
  * @head: head node
- * Return: number node
+ * Return: nothing
  */
 void free_list(list_t *head)
 {
@@ -20,4 +19,5 @@ void free_list(list_t *head)
 		free(next->str);
 		free(next);
 	}
+	free(head);
 }
