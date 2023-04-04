@@ -11,8 +11,9 @@
 int pop_listint(listint_t **head)
 {
 	int n;
-	listint_t *node = malloc(sizeof(listint_t));
+	listint_t *node;
 
+	node = *head;
 	if (*head == NULL)
 		return (0);
 	n = node->n;
@@ -20,7 +21,6 @@ int pop_listint(listint_t **head)
 	{
 		return (n);
 	}
-	node = *head;
 	*head = node->next;
 	free(node);
 	return (n);
