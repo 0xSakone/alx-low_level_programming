@@ -6,7 +6,7 @@
 /**
  * pop_listint - remove first node and return value
  * @head: head node
- * Return: nothing
+ * Return: n poped integer
  */
 int pop_listint(listint_t **head)
 {
@@ -19,8 +19,8 @@ int pop_listint(listint_t **head)
 	n = node->n;
 	if (node->next == NULL)
 	{
+		head = NULL;
 		free(node);
-		free(head);
 		return (n);
 	}
 	*head = node->next;
