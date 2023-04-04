@@ -19,7 +19,7 @@ int pop_listint(listint_t **head)
 	n = node->n;
 	if (node->next == NULL)
 	{
-		head = NULL;
+		free(head);
 		free(node);
 		return (n);
 	}
