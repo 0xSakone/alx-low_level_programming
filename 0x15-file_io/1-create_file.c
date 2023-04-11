@@ -38,7 +38,7 @@ int create_file(const char *filename, char *text_content)
 	}
 	else
 	{
-		if (write(file, text_content, content_count) == -1)
+		if (write(file, text_content, content_count - 1) == -1)
 			return (-1);
 	}
 	close(file);
