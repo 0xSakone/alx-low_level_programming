@@ -32,13 +32,11 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	content_count = _strlen(text_content);
-	if (content_count == 0)
-	{
+	if (content_count == 0 || text_content == NULL)
 		write(file, "", 0);
-	}
 	else
 	{
-		if (write(file, text_content, content_count - 1) == -1)
+		if (write(file, text_content, content_count) == -1)
 			return (-1);
 	}
 	close(file);
