@@ -1,7 +1,7 @@
 #include "main.h"
 
-/*
- * read_textfile - read texfile
+/**
+ * read_textfile - read texfile is function to read content
  * @filename: filename
  * @letters: number of caracter
  * Return: number of printed caracters
@@ -19,10 +19,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	while (read(file, buffer, 1) > 0 && count <= (int)letters)
 	{
 		ecrit = write(STDOUT_FILENO, buffer, 1);
-        if (ecrit == -1) {
-            close(file);
-        }
-        count++;
+		if (ecrit == -1)
+			close(file);
+		count++;
 	}
 
 	return (count);
