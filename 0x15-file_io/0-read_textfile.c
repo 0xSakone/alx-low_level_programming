@@ -8,9 +8,9 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int file, count = 0;
-	char buffer[1];
-	ssize_t ecrit;
+	int file;
+	char *buffer;
+	ssize_t ecrit, reader;
 
 	if (filename == NULL)
 		return (0);
@@ -18,16 +18,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (file == -1)
 		return (0);
 
-	while (read(file, buffer, 1) > 0 && count <= (int)letters)
-	{
-		ecrit = write(STDOUT_FILENO, buffer, 1);
-		if (ecrit == -1)
-		{
-			close(file);
-			return (0);
-		}
-		count++;
-	}
+	buffer = malloc(sizeof(char) * (letters));
+	if (!buffer)
+		return (0);
 
-	return (count);
+	reader = read(file, buffer, letters);
+	ecrit = write(STDOUT_FILENO, buffer, reader);
+	close(file);
+	free(buffer);
+
+	return (ecrit);
 }
