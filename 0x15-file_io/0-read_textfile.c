@@ -12,6 +12,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char buffer[1];
 	ssize_t ecrit;
 
+	if (filename == NULL)
+		return (0);
 	file = open(filename, O_RDONLY);
 	if (file == -1)
 		return (0);
@@ -20,7 +22,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		ecrit = write(STDOUT_FILENO, buffer, 1);
 		if (ecrit == -1)
+		{
 			close(file);
+			return (0);
+		}
 		count++;
 	}
 
